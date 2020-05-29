@@ -1,9 +1,9 @@
 {
   "type": "panel",
-  "name": "Advantech Ushop Cross Time Graph",
-  "id": "advantech-ushop-cross-time-graph",
+  "name": "Graph Echarts",
+  "id": "echarts-graph-panel",
   "info": {
-    "description": "ushop cross time graph panel for Advantech",
+    "description": "a graph panel by echarts for grafana v6",
     "author": {
       "name": "Langnang",
       "url": "http://grafana.com"
@@ -21,7 +21,7 @@
     "updated": "2020-05-29"
   },
   "dependencies": {
-    "grafanaVersion": "5.0",
+    "grafanaVersion": "6.5.2",
     "plugins": []
   }
 }

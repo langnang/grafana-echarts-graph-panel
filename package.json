@@ -1,7 +1,7 @@
 {
-  "name": "advantech-ushop-cross-time-graph",
+  "name": "grafana-echarts-graph-panel",
   "version": "2.0.0",
-  "description": "ushop cross time graph panel for Advantech",
+  "description": "a graph panel by echarts for grafana v6",
   "main": "src/module.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
