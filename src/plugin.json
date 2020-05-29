@@ -5,20 +5,20 @@
   "info": {
     "description": "ushop cross time graph panel for Advantech",
     "author": {
-      "name": "Advantech",
+      "name": "Langnang",
       "url": "http://grafana.com"
     },
     "keywords": [
       "panel"
     ],
     "logos": {
-      "small": "src/img/logo.svg",
-      "large": "src/img/logo.svg"
+      "small": "src/img/logo.png",
+      "large": "src/img/logo.png"
     },
     "links": [],
     "screenshots": [],
-    "version": "1.0.8",
-    "updated": "2020-04-21"
+    "version": "2.0.0",
+    "updated": "2020-05-29"
   },
   "dependencies": {
     "grafanaVersion": "5.0",

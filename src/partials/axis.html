@@ -79,15 +79,17 @@
                 </div>
             </div>
         </div> -->
-        <div class="gf-form" checked="ctrl.panel.setOption.yAxis[0].splitLine.show" on-change="ctrl.refresh()">
-            <label for="check-yAxis-solitLine-show" class="gf-form-label width-8">splitLine.show</label>
-            <div class="gf-form-switch ">
+        <label for="check-yAxis-solitLine-show" class="gf-form-switch-container" on-change="ctrl.refresh()">
+            <div class="gf-form-label width-8">
+                splitLine.show
+            </div>
+            <div class="gf-form-switch">
                 <input id="check-yAxis-solitLine-show" type="checkbox"
                     ng-model="ctrl.panel.setOption.yAxis[0].splitLine.show" ng-change="ctrl.refresh()"
-                    class="ng-pristine ng-untouched ng-valid ng-not-empty">
-                <label for="check-yAxis-solitLine-show" data-on="Yes" data-off="No"></label>
+                    class="ng-valid ng-dirty ng-valid-parse ng-touched ng-not-empty">
+                <span class="gf-form-switch__slider"></span>
             </div>
-        </div>
+        </label>
         <div class="gf-form" ng-if='ctrl.panel.setOption.yAxis[0].splitLine.show'>
             <label class="gf-form-label width-8">lineStyle.type</label>
             <div class="gf-form-select-wrapper">
@@ -150,23 +152,27 @@
                     ng-change="ctrl.refresh()"></select>
             </div>
         </div>
-        <div class="gf-form" checked="ctrl.panel.setOption.xAxis[0].boundaryGap" on-change="ctrl.refresh()">
-            <label for="check-xAxis-boundaryGap" class="gf-form-label width-8">boundaryGap</label>
-            <div class="gf-form-switch ">
-                <input id="check-xAxis-boundaryGap" type="checkbox" ng-model="ctrl.panel.setOption.xAxis[0].boundaryGap"
-                    ng-change="ctrl.refresh()" class="ng-pristine ng-untouched ng-valid ng-not-empty">
-                <label for="check-xAxis-boundaryGap" data-on="Yes" data-off="No"></label>
+        <label for="check-xAxis-boundaryGap" class="gf-form-switch-container" on-change="ctrl.refresh()">
+            <div class="gf-form-label width-8">
+                boundaryGap
             </div>
-        </div>
-        <div class="gf-form" checked="ctrl.panel.setOption.xAxis[0].splitLine.show" on-change="ctrl.refresh()">
-            <label for="check-xAxis-solitLine-show" class="gf-form-label width-8">splitLine.show</label>
-            <div class="gf-form-switch ">
+            <div class="gf-form-switch">
+                <input id="check-xAxis-boundaryGap" type="checkbox" ng-model="ctrl.panel.setOption.xAxis[0].boundaryGap"
+                    ng-change="ctrl.refresh()" class="ng-valid ng-dirty ng-valid-parse ng-touched ng-not-empty">
+                <span class="gf-form-switch__slider"></span>
+            </div>
+        </label>
+        <label for="check-xAxis-solitLine-show" class="gf-form-switch-container" on-change="ctrl.refresh()">
+            <div class="gf-form-label width-8">
+                splitLine.show
+            </div>
+            <div class="gf-form-switch">
                 <input id="check-xAxis-solitLine-show" type="checkbox"
                     ng-model="ctrl.panel.setOption.xAxis[0].splitLine.show" ng-change="ctrl.refresh()"
-                    class="ng-pristine ng-untouched ng-valid ng-not-empty">
-                <label for="check-xAxis-solitLine-show" data-on="Yes" data-off="No"></label>
+                    class="ng-valid ng-dirty ng-valid-parse ng-touched ng-not-empty">
+                <span class="gf-form-switch__slider"></span>
             </div>
-        </div>
+        </label>
         <div class="gf-form" ng-if='ctrl.panel.setOption.xAxis[0].splitLine.show'>
             <label class="gf-form-label width-8">lineStyle.type</label>
             <div class="gf-form-select-wrapper">

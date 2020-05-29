@@ -1,15 +1,21 @@
 {
   "name": "advantech-ushop-cross-time-graph",
-  "version": "1.0.8",
+  "version": "2.0.0",
   "description": "ushop cross time graph panel for Advantech",
   "main": "src/module.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run watch",
     "build": "grunt",
     "watch": "grunt watch"
   },
-  "author": "Advantech",
+  "author": "Langnang",
   "license": "ISC",
+  "dependencies": {
+    "echarts": "^3.8.5",
+    "echarts-liquidfill": "^1.0.5",
+    "echarts-wordcloud": "^1.0.3"
+  },
   "devDependencies": {
     "babel": "~6.5.1",
     "babel-cli": "^6.18.0",
@@ -35,10 +41,5 @@
     "grunt-systemjs-builder": "^0.2.5",
     "load-grunt-tasks": "~3.2.0",
     "lodash": "^4.17.2"
-  },
-  "dependencies": {
-    "echarts": "^3.8.5",
-    "echarts-liquidfill": "^1.0.5",
-    "echarts-wordcloud": "^1.0.3"
   }
 }
