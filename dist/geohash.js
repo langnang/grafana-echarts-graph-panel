@@ -1,0 +1,2 @@
+"use strict";System.register([],function(a,b){function c(a){if(!a||0===a.length)throw new Error("Missing geohash value");var b=[16,8,4,2,1],c="0123456789bcdefghjkmnpqrstuvwxyz",e=1,f=[],g=[];f[0]=-90,f[1]=90,g[0]=-180,g[1]=180;var h=void 0;a.split("").forEach(function(a){h=c.indexOf(a),b.forEach(function(a){e?d(g,h,a):d(f,h,a),e=!e})});var i=(f[0]+f[1])/2,j=(g[0]+g[1])/2;return{latitude:i,longitude:j}}function d(a,b,c){b&c?a[0]=(a[0]+a[1])/2:a[1]=(a[0]+a[1])/2}return a("default",c),{setters:[],execute:function(){}}});
+//# sourceMappingURL=geohash.js.map

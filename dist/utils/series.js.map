@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/utils/series.js"],"names":["series","option"],"mappings":";;;;;;;;;wBAAaA,M,GAAS,SAATA,MAAS,CAACC,MAAD,EAAY,CAEjC,C","file":"series.js","sourcesContent":["export const series = (option) => {\r\n\r\n}"]}

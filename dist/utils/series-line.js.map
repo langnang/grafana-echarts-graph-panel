@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/utils/series-line.js"],"names":["seriesLine","option","def","type"],"mappings":";;;;;;;;;kCAAaA,U,GAAa,SAAbA,UAAa,CAACC,MAAD,EAAY;AAClC,oBAAIC,MAAM;AACNC,0BAAM;AADA,iBAAV;AAIH,a","file":"series-line.js","sourcesContent":["export const seriesLine = (option) => {\r\n    let def = {\r\n        type: \"line\",\r\n    }\r\n\r\n}"]}

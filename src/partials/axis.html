@@ -1,0 +1,187 @@
+<div class="editor-row">
+    <div class="section gf-form-group" ng-show="ctrl.panel.setOption.yAxis">
+        <h5 class="section-heading">Left Y-Aixs</h5>
+        <!-- <div>
+            <div class="gf-form">
+                <label class="gf-form-label width-6">Unit</label>
+                <div class="gf-form-dropdown-typeahead max-width-20 ng-pristine ng-untouched ng-valid ng-not-empty"
+                    ng-model="yaxis.format" dropdown-typeahead2="ctrl.unitFormats"
+                    dropdown-typeahead-on-select="ctrl.setUnitFormat(yaxis, $subItem)">
+                    <input type="text" class="gf-form-input" spellcheck="false" style="display: none;"
+                        data-provide="typeahead">
+                    <a class="gf-form-input dropdown-toggle" tabindex="1" gf-dropdown="menuItems" data-toggle="dropdown"
+                        data-placement="top" style="">short</a>
+                    <ul class="dropdown-menu dropup" role="menu" aria-labelledby="drop1">
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" ng-href="">none</a>
+                            <ul class="dropdown-menu " role="menu" aria-labelledby="drop1">
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,0)">none</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,1)">short</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,2)">percent (0-100)</a>
+                                </li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,3)">percent (0.0-1.0)</a>
+                                </li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,4)">Humidity (%H)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,5)">decibel</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,6)">hexadecimal (0x)</a>
+                                </li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,7)">hexadecimal</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,8)">scientific notation</a>
+                                </li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,9)">locale format</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu"><a tabindex="-1" ng-href="">currency</a>
+                            <ul class="dropdown-menu " role="menu" aria-labelledby="drop1">
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,0)">Dollars ($)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,1)">Pounds (£)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,2)">Euro (€)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,3)">Yen (¥)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,4)">Rubles (₽)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,5)">Hryvnias (₴)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,6)">Real (R$)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,7)">Danish Krone (kr)</a>
+                                </li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,8)">Icelandic Króna
+                                        (kr)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,9)">Norwegian Krone
+                                        (kr)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,10)">Swedish Krona (kr)</a>
+                                </li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,11)">Czech koruna (czk)</a>
+                                </li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,12)">Swiss franc (CHF)</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu"><a tabindex="-1" ng-href="">time</a>
+                            <ul class="dropdown-menu " role="menu" aria-labelledby="drop1">
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(2,0)">Hertz (1/s)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(2,1)">nanoseconds (ns)</a>
+                                </li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(2,2)">microseconds (µs)</a>
+                                </li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(2,3)">milliseconds (ms)</a>
+                                </li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(2,4)">seconds (s)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(2,5)">minutes (m)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(2,6)">hours (h)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(2,7)">days (d)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(2,8)">duration (ms)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(2,9)">duration (s)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(2,10)">duration
+                                        (hh:mm:ss)</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(2,11)">Timeticks (s/100)</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+        <div class="gf-form" checked="ctrl.panel.setOption.yAxis[0].splitLine.show" on-change="ctrl.refresh()">
+            <label for="check-yAxis-solitLine-show" class="gf-form-label width-8">splitLine.show</label>
+            <div class="gf-form-switch ">
+                <input id="check-yAxis-solitLine-show" type="checkbox"
+                    ng-model="ctrl.panel.setOption.yAxis[0].splitLine.show" ng-change="ctrl.refresh()"
+                    class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="check-yAxis-solitLine-show" data-on="Yes" data-off="No"></label>
+            </div>
+        </div>
+        <div class="gf-form" ng-if='ctrl.panel.setOption.yAxis[0].splitLine.show'>
+            <label class="gf-form-label width-8">lineStyle.type</label>
+            <div class="gf-form-select-wrapper">
+                <select class="gf-form-input" ng-model="ctrl.panel.setOption.yAxis[0].splitLine.lineStyle.type"
+                    ng-options="i for i in ['solid','dashed','dotted']" ng-change="ctrl.refresh()"></select>
+            </div>
+
+        </div>
+        <div class="gf-form" ng-if="ctrl.panel.setOption.yAxis[0].splitLine.show">
+            <label class="gf-form-label width-8">lineStyle.opacity</label>
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-model="ctrl.panel.setOption.yAxis[0].splitLine.lineStyle.opacity" ng-change="ctrl.refresh()"
+                ng-value="ctrl.panel.setOption.yAxis[0].splitLine.lineStyle.opacity">
+        </div>
+        <div class="gf-form" ng-if="ctrl.panel.setOption.yAxis[0].splitLine.show">
+            <label class="gf-form-label width-8">axisLabel.formatter</label>
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-model="ctrl.panel.setOption.yAxis[0].axisLabel.formatter" ng-change="ctrl.refresh()"
+                ng-value="ctrl.panel.setOption.yAxis[0].axisLabel.formatter">
+        </div>
+
+    </div>
+    <div class="section gf-form-group" ng-show="ctrl.panel.setOption.xAxis">
+        <h5 class="section-heading">xAxis</h5>
+        <!-- <div>
+            <div class="gf-form">
+                <label class="gf-form-label width-6">Unit</label>
+                <div class="gf-form-dropdown-typeahead max-width-20 ng-pristine ng-untouched ng-valid ng-not-empty"
+                    ng-model="yaxis.format" dropdown-typeahead2="ctrl.unitFormats"
+                    dropdown-typeahead-on-select="ctrl.setUnitFormat(yaxis, $subItem)">
+                    <input type="text" class="gf-form-input" spellcheck="false" style="display: none;"
+                        data-provide="typeahead" />
+                    <ul class="dropdown-menu dropup" role="menu" aria-labelledby="drop1">
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" ng-href="">Time</a>
+                            <ul class="dropdown-menu " role="menu" aria-labelledby="drop1">
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,0)">YYYY</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,1)">YYYY-MM</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(0,2)">YYYY-MM-DD hh:mm:ss</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu"><a tabindex="-1" ng-href="">Custom</a>
+                            <ul class="dropdown-menu " role="menu" aria-labelledby="drop1">
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,0)">YYYY</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,1)">MM</a></li>
+                                <li><a tabindex="-1" ng-href="" ng-click="menuItemSelected(1,2)">DD</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu"><a tabindex="-1" ng-href="">Series</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+        <div class="gf-form">
+            <label class="gf-form-label width-8">Format</label>
+            <div class="gf-form-select-wrapper">
+                <select class="gf-form-input" ng-model="ctrl.panel.format"
+                    ng-options="i for i in ['Year','Month','Week','Day','Custom-Year','Custom-Month','Custom-FullMonth','Series','YYYY','YYYY-MM','YYYY-MM-DD','YYYY-MM-DD hh:24','MM','MM-DD','MM-DD hh:24','DD','DD hh:24','hh:24']"
+                    ng-change="ctrl.refresh()"></select>
+            </div>
+        </div>
+        <div class="gf-form" checked="ctrl.panel.setOption.xAxis[0].boundaryGap" on-change="ctrl.refresh()">
+            <label for="check-xAxis-boundaryGap" class="gf-form-label width-8">boundaryGap</label>
+            <div class="gf-form-switch ">
+                <input id="check-xAxis-boundaryGap" type="checkbox" ng-model="ctrl.panel.setOption.xAxis[0].boundaryGap"
+                    ng-change="ctrl.refresh()" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="check-xAxis-boundaryGap" data-on="Yes" data-off="No"></label>
+            </div>
+        </div>
+        <div class="gf-form" checked="ctrl.panel.setOption.xAxis[0].splitLine.show" on-change="ctrl.refresh()">
+            <label for="check-xAxis-solitLine-show" class="gf-form-label width-8">splitLine.show</label>
+            <div class="gf-form-switch ">
+                <input id="check-xAxis-solitLine-show" type="checkbox"
+                    ng-model="ctrl.panel.setOption.xAxis[0].splitLine.show" ng-change="ctrl.refresh()"
+                    class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="check-xAxis-solitLine-show" data-on="Yes" data-off="No"></label>
+            </div>
+        </div>
+        <div class="gf-form" ng-if='ctrl.panel.setOption.xAxis[0].splitLine.show'>
+            <label class="gf-form-label width-8">lineStyle.type</label>
+            <div class="gf-form-select-wrapper">
+                <select class="gf-form-input" ng-model="ctrl.panel.setOption.xAxis[0].splitLine.lineStyle.type"
+                    ng-options="i for i in ['solid','dashed','dotted']" ng-change="ctrl.refresh()"></select>
+            </div>
+
+        </div>
+        <div class="gf-form" ng-if="ctrl.panel.setOption.xAxis[0].splitLine.show">
+            <label class="gf-form-label width-8">lineStyle.opacity</label>
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-model="ctrl.panel.setOption.xAxis[0].splitLine.lineStyle.opacity" ng-change="ctrl.refresh()"
+                ng-value="ctrl.panel.setOption.xAxis[0].splitLine.lineStyle.opacity">
+        </div>
+    </div>
+
+
+</div>

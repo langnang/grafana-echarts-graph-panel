@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/utils/grid.js"],"names":["grid","option"],"mappings":";;;;;;;;;sBAAaA,I,GAAO,SAAPA,IAAO,CAACC,MAAD,EAAY,CAE/B,C","file":"grid.js","sourcesContent":["export const grid = (option) => {\r\n\r\n}"]}

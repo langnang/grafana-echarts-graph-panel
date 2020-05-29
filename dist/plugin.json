@@ -1,0 +1,27 @@
+{
+  "type": "panel",
+  "name": "Advantech Ushop Cross Time Graph",
+  "id": "advantech-ushop-cross-time-graph",
+  "info": {
+    "description": "ushop cross time graph panel for Advantech",
+    "author": {
+      "name": "Advantech",
+      "url": "http://grafana.com"
+    },
+    "keywords": [
+      "panel"
+    ],
+    "logos": {
+      "small": "src/img/logo.svg",
+      "large": "src/img/logo.svg"
+    },
+    "links": [],
+    "screenshots": [],
+    "version": "1.0.8",
+    "updated": "2020-04-21"
+  },
+  "dependencies": {
+    "grafanaVersion": "5.0",
+    "plugins": []
+  }
+}

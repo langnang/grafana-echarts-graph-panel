@@ -1,0 +1,12 @@
+{
+  "name": "advantech-ushop-cross-time-graph",
+  "description": "Ushop Cross Time Graph Panel for Advantech",
+  "main": "src/main.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+  }
+}

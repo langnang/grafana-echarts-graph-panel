@@ -1,0 +1,277 @@
+<div class="editor-row">
+
+    <div class="section gf-form-group" ng-show="ctrl.panel.setOption.legend">
+        <h5 class="section-heading">legend</h5>
+        <div class="gf-form" checked="ctrl.panel.setOption.legend.show" on-change="ctrl.refresh()">
+            <label for="check-legend-show" class="gf-form-label width-7">show</label>
+            <div class="gf-form-switch ">
+                <input id="check-legend-show" type="checkbox" ng-model="ctrl.panel.setOption.legend.show"
+                    ng-change="ctrl.refresh()" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="check-legend-show" data-on="Yes" data-off="No"></label>
+            </div>
+        </div>
+        <div ng-show="ctrl.panel.setOption.legend.show">
+            <div class="gf-form">
+                <label class="gf-form-label width-7">type</label>
+                <div class="gf-form-select-wrapper">
+                    <select class="gf-form-input" ng-model="ctrl.panel.setOption.legend.type"
+                        ng-options="i for i in ['plain','scroll']" ng-change="ctrl.refresh()"></select>
+                </div>
+            </div>
+            <div class="gf-form">
+                <label class="gf-form-label width-7">left</label>
+                <div class="gf-form-select-wrapper">
+                    <select class="gf-form-input" ng-model="ctrl.panel.setOption.legend.left"
+                        ng-options="i for i in ['auto','left','center','right']" ng-change="ctrl.refresh()"></select>
+                </div>
+            </div>
+            <div class="gf-form">
+                <label class="gf-form-label width-7">top</label>
+                <div class="gf-form-select-wrapper">
+                    <select class="gf-form-input" ng-model="ctrl.panel.setOption.legend.top"
+                        ng-options="i for i in ['auto','top','middle','bottom']" ng-change="ctrl.refresh()"></select>
+                </div>
+            </div>
+            <div class="gf-form">
+                <label class="gf-form-label width-7">align</label>
+                <div class="gf-form-select-wrapper">
+                    <select class="gf-form-input" ng-model="ctrl.panel.setOption.legend.align"
+                        ng-options="i for i in ['auto','left','right']" ng-change="ctrl.refresh()"></select>
+                </div>
+            </div>
+            <div class="gf-form">
+                <label class="gf-form-label width-7">orient</label>
+                <div class="gf-form-select-wrapper">
+                    <select class="gf-form-input" ng-model="ctrl.panel.setOption.legend.orient"
+                        ng-options="i for i in ['horizontal','vertical']" ng-change="ctrl.refresh()"></select>
+                </div>
+            </div>
+            <div class="gf-form">
+                <label class="gf-form-label width-7">icon</label>
+                <div class="gf-form-select-wrapper">
+                    <select class="gf-form-input" ng-model="ctrl.panel.setOption.legend.icon"
+                        ng-options="i for i in ['circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow', 'none']"
+                        ng-change="ctrl.refresh()"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section gf-form-group" ng-show="ctrl.panel.setOption.grid">
+        <h5 class="section-heading">grid</h5>
+        <div class="gf-form" label-class="width-7">
+            <label class="gf-form-label width-7">left</label>
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-model="ctrl.panel.setOption.grid.left" ng-change="ctrl.refresh()"
+                ng-value="ctrl.panel.setOption.grid.left">
+        </div>
+        <div class="gf-form" label-class="width-7">
+            <label class="gf-form-label width-7">top</label>
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-model="ctrl.panel.setOption.grid.top" ng-change="ctrl.refresh()"
+                ng-value="ctrl.panel.setOption.grid.top">
+        </div>
+        <div class="gf-form" label-class="width-7">
+            <label class="gf-form-label width-7">right</label>
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-model="ctrl.panel.setOption.grid.right" ng-change="ctrl.refresh()"
+                ng-value="ctrl.panel.setOption.grid.right">
+        </div>
+        <div class="gf-form" label-class="width-7">
+            <label class="gf-form-label width-7">bottom</label>
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-model="ctrl.panel.setOption.grid.bottom" ng-change="ctrl.refresh()"
+                ng-value="ctrl.panel.setOption.grid.bottom">
+        </div>
+        <div class="gf-form" label="Show" label-class="width-7" checked="ctrl.panel.setOption.grid.containLabel"
+            on-change="ctrl.refresh()">
+            <label for="check-grid-containLabel" class="gf-form-label width-7 pointer">containLabel</label>
+            <div class="gf-form-switch ">
+                <input id="check-grid-containLabel" type="checkbox" ng-model="ctrl.panel.setOption.grid.containLabel"
+                    ng-change="ctrl.refresh()" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="check-grid-containLabel" data-on="Yes" data-off="No"></label>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="section gf-form-group" ng-show="ctrl.panel.setOption.color">
+        <h5 class="section-heading">color</h5>
+        <div class="gf-form" ng-repeat="(index,c) in ctrl.panel.setOption.series track by $index">
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-model="ctrl.panel.setOption.color[$index]" ng-change="ctrl.refresh()">
+        </div>
+    </div>
+
+    <div class="section gf-form-group" ng-show="ctrl.panel.setOption.tooltip">
+        <h5 class="section-heading">tooltip</h5>
+        <div class="gf-form" checked="ctrl.panel.setOption.tooltip.show" on-change="ctrl.refresh()">
+            <label for="check-tooltip-show" class="gf-form-label width-7">show</label>
+            <div class="gf-form-switch ">
+                <input id="check-tooltip-show" type="checkbox" ng-model="ctrl.panel.setOption.tooltip.show"
+                    ng-change="ctrl.refresh()" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="check-tooltip-show" data-on="Yes" data-off="No"></label>
+            </div>
+        </div>
+        <div ng-show="ctrl.panel.setOption.tooltip.show">
+            <div class="gf-form">
+                <label class="gf-form-label width-7">trigger</label>
+                <div class="gf-form-select-wrapper">
+                    <select class="gf-form-input" ng-model="ctrl.panel.setOption.tooltip.trigger"
+                        ng-options="i for i in ['item','axis','none']" ng-change="ctrl.refresh()"></select>
+                </div>
+            </div>
+            <div class="gf-form">
+                <label class="gf-form-label width-7">axisPointer.type</label>
+                <div class="gf-form-select-wrapper">
+                    <select class="gf-form-input" ng-model="ctrl.panel.setOption.tooltip.axisPointer.type"
+                        ng-options="i for i in ['line','shadow']" ng-change="ctrl.refresh()"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section gf-form-group" ng-show="ctrl.panel.setOption.toolbox">
+        <h5 class="section-heading">toolbox</h5>
+        <div class="gf-form" checked="ctrl.panel.setOption.toolbox.show" on-change="ctrl.refresh()">
+            <label for="check-toolbox-show" class="gf-form-label width-7">show</label>
+            <div class="gf-form-switch ">
+                <input id="check-toolbox-show" type="checkbox" ng-model="ctrl.panel.setOption.toolbox.show"
+                    ng-change="ctrl.refresh()" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="check-toolbox-show" data-on="Yes" data-off="No"></label>
+            </div>
+        </div>
+        <div ng-show="ctrl.panel.setOption.toolbox.show">
+            <div class="gf-form">
+                <label class="gf-form-label width-7">orient</label>
+                <div class="gf-form-select-wrapper">
+                    <select class="gf-form-input" ng-model="ctrl.panel.setOption.toolbox.orient"
+                        ng-options="i for i in ['horizontal','vertical']" ng-change="ctrl.refresh()"></select>
+                </div>
+            </div>
+            <div class="gf-form">
+                <label class="gf-form-label width-7">left</label>
+                <div class="gf-form-select-wrapper">
+                    <select class="gf-form-input" ng-model="ctrl.panel.setOption.toolbox.left"
+                        ng-options="i for i in ['auto','left','center','right']" ng-change="ctrl.refresh()"></select>
+                </div>
+            </div>
+            <div class="gf-form">
+                <label class="gf-form-label width-7">top</label>
+                <div class="gf-form-select-wrapper">
+                    <select class="gf-form-input" ng-model="ctrl.panel.setOption.toolbox.top"
+                        ng-options="i for i in ['auto','top','middle','bottom']" ng-change="ctrl.refresh()"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section gf-form-group">
+        <h5 class="section-heading">animation</h5>
+        <div class="gf-form" checked="ctrl.panel.setOption.animation" on-change="ctrl.refresh()">
+            <label for="check-animation" class="gf-form-label width-7">animation</label>
+            <div class="gf-form-switch ">
+                <input id="check-animation" type="checkbox" ng-model="ctrl.panel.setOption.animation"
+                    ng-change="ctrl.refresh()" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="check-animation" data-on="Yes" data-off="No"></label>
+            </div>
+        </div>
+    </div>
+    <div class="section gf-form-group">
+        <h5 class="section-heading">markLine</h5>
+        <div class="gf-form" checked="ctrl.panel.markLine.show" on-change="ctrl.refresh()">
+            <label for="check-animation" class="gf-form-label width-7">show</label>
+            <div class="gf-form-switch ">
+                <input id="check-markLine" type="checkbox" ng-model="ctrl.panel.markLine.show"
+                    ng-change="ctrl.refresh()" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="check-markLine" data-on="Yes" data-off="No"></label>
+            </div>
+        </div>
+        <div class="gf-form" ng-if="ctrl.panel.markLine.show">
+            <label class="gf-form-label width-7">type</label>
+            <div class="gf-form-select-wrapper">
+                <select class="gf-form-input" ng-model="ctrl.panel.markLine.type" ng-options="i for i in ['average']"
+                    ng-change="ctrl.refresh()"></select>
+            </div>
+        </div>
+        <div class="gf-form" label-class="width-7">
+            <label class="gf-form-label width-7">precision</label>
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-model="ctrl.panel.markLine.precision" ng-change="ctrl.refresh()"
+                ng-value="ctrl.panel.markLine.precision">
+        </div>
+        <div class="gf-form" label-class="width-7">
+            <label class="gf-form-label width-7">formatter</label>
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-model="ctrl.panel.markLine.formatter" ng-change="ctrl.refresh()"
+                ng-value="ctrl.panel.markLine.formatter">
+        </div>
+    </div>
+</div>
+
+
+<div class="editor-row">
+    <div class="section gf-form-group" ng-show="ctrl.panel.setOption.series">
+        <h5 class="section-heading">series</h5>
+        <div class="gf-form" ng-repeat="(index,c) in ctrl.panel.setOption.series track by $index">
+
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-model="ctrl.panel.setOption.series[$index].name" ng-change="ctrl.refresh()" disabled="disabled">
+
+            <label class="gf-form-label width-4">type</label>
+            <div class="gf-form-select-wrapper">
+                <select class="gf-form-input" ng-model="ctrl.panel.spareOption.series.type[$index]"
+                    ng-options="i for i in ['line','bar']" ng-change="ctrl.refresh()"></select>
+            </div>
+
+            <label for="check-series-smooth-{{ $index }}" class="gf-form-label width-5"
+                ng-if="ctrl.panel.spareOption.series.type[$index]=='line'">smooth</label>
+            <div class="gf-form-switch " ng-if="ctrl.panel.spareOption.series.type[$index]=='line'">
+                <input id="check-series-smooth-{{ $index }}" type="checkbox"
+                    ng-model="ctrl.panel.spareOption.series.smooth[$index]" ng-change="ctrl.refresh()"
+                    class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="check-series-smooth-{{ $index }}" data-on="Yes" data-off="No"></label>
+            </div>
+
+            <label for="check-series-stack-{{ $index }}" class="gf-form-label width-5">stack</label>
+            <div class="gf-form-switch ">
+                <input id="check-series-stack-{{ $index }}" type="checkbox"
+                    ng-model="ctrl.panel.spareOption.series.stack[$index]" ng-change="ctrl.refresh()"
+                    class="ng-pristine ng-untouched ng-valid ng-not-empty">
+                <label for="check-series-stack-{{ $index }}" data-on="Yes" data-off="No"></label>
+            </div>
+
+            <label for="check-series-step-{{ $index }}" class="gf-form-label width-5"
+                ng-if="ctrl.panel.spareOption.series.type[$index]=='line'">step</label>
+            <div class="gf-form-select-wrapper" ng-if="ctrl.panel.spareOption.series.type[$index]=='line'">
+                <select class="gf-form-input" ng-model="ctrl.panel.spareOption.series.step[$index]"
+                    ng-options="i for i in [false,'start','middle','end']" ng-change="ctrl.refresh()"></select>
+            </div>
+            <label class="gf-form-label width-8"
+                ng-if="ctrl.panel.spareOption.series.type[$index]=='line'">symbolSize</label>
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-if="ctrl.panel.spareOption.series.type[$index]=='line'"
+                ng-model="ctrl.panel.spareOption.series.symbolSize[$index]" ng-change="ctrl.refresh()"
+                ng-value="ctrl.panel.spareOption.series.symbolSize[$index]">
+
+            <label class="gf-form-label width-8"
+                ng-if="ctrl.panel.spareOption.series.type[$index]=='line'">lineStyle.width</label>
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-if="ctrl.panel.spareOption.series.type[$index]=='line'"
+                ng-model="ctrl.panel.spareOption.series.itemStyle.normal.lineStyle.width[$index]"
+                ng-change="ctrl.refresh()"
+                ng-value="ctrl.panel.spareOption.series.itemStyle.normal.lineStyle.width[$index]">
+
+            <label class="gf-form-label width-8"
+                ng-if="ctrl.panel.spareOption.series.type[$index]=='line'">areaStyle.opacity</label>
+            <input type="text" class="gf-form-input max-width-6 ng-valid ng-empty ng-dirty ng-valid-number ng-touched"
+                ng-if="ctrl.panel.spareOption.series.type[$index]=='line'"
+                ng-model="ctrl.panel.spareOption.series.itemStyle.normal.areaStyle.opacity[$index]"
+                ng-change="ctrl.refresh()"
+                ng-value="ctrl.panel.spareOption.series.itemStyle.normal.areaStyle.opacity[$index]">
+        </div>
+    </div>
+</div>

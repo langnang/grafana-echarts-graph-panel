@@ -1,0 +1,2 @@
+"use strict";System.register(["./controller","app/plugins/sdk"],function(a,b){var c,d;return{setters:[function(a){c=a.Controller},function(a){d=a.loadPluginCss}],execute:function(){d({dark:"plugins/advantech-ushop-cross-time-graph/css/grouped.dark.css",light:"plugins/advantech-ushop-cross-time-graph/css/grouped.light.css"}),a("PanelCtrl",c)}}});
+//# sourceMappingURL=module.js.map
