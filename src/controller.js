@@ -372,8 +372,8 @@ export class Controller extends MetricsPanelCtrl {
     this.render();
   }
   onInitEditMode() {
-    this.addEditorTab('Axis', 'public/plugins/advantech-ushop-cross-time-graph/partials/axis.html', 2);
-    this.addEditorTab('Option', 'public/plugins/advantech-ushop-cross-time-graph/partials/options.html', 3);
+    this.addEditorTab('Axis', 'public/plugins/echarts-graph-panel/partials/axis.html', 2);
+    this.addEditorTab('Option', 'public/plugins/echarts-graph-panel/partials/options.html', 3);
   }
 
   refreshData() {
